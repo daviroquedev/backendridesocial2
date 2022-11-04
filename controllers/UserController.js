@@ -91,7 +91,13 @@ const getCurrentUser = async(req,res)=>{
 
 // update an user
 const update = async (req,res)=>{
-    res.send("Update")
+    
+    const {name, password, bio} = req.body
+
+    let profileImage = null
+    if(req.file){
+        profileImage = req.file.filename
+    }
 }
 
 module.exports={
