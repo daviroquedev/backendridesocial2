@@ -4,7 +4,7 @@ const path = require("path")
 const cors = require("cors")
 const port = process.env.PORT;
 const bodyParser = require("body-parser")
-const linkFront = 'https://ridesocial.vercel.app/'
+const linkFront = 'https://ridesocial.vercel.app'
 
 const app = express()
 
@@ -14,8 +14,7 @@ app.use(bodyParser.json({limit:'12mb'}))
 // app.use(bodyParser.urlencoded({limit:'12mb',extended:false}))
 
 // solve CORS
-app.use(cors())
-    //{credentials: true, origin: linkFront}))
+app.use(cors({credentials: true, origin: linkFront}))
 
 //upload directory
 app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
@@ -28,6 +27,6 @@ const router = require("./routes/Router");
 
 app.use(router)
 
-app.listen( ()=>{
-    console.log(`app rodando na porta `)
+app.listen(port, ()=>{
+    console.log(`app rodando na porta ${port}`)
 })
