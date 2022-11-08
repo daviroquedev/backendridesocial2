@@ -4,6 +4,7 @@ const path = require("path")
 const cors = require("cors")
 const port = process.env.PORT;
 const bodyParser = require("body-parser")
+const linkFront = 'https://ridesocial-p3ugdz5ku-daviroquedev.vercel.app/'
 
 const app = express()
 
@@ -13,7 +14,7 @@ app.use(bodyParser.json({limit:'12mb'}))
 // app.use(bodyParser.urlencoded({limit:'12mb',extended:false}))
 
 // solve CORS
-app.use(cors({credentials: true, origin: "http://127.0.0.1:5173"}))
+app.use(cors({credentials: true, origin: linkFront}))
 
 //upload directory
 app.use("/uploads", express.static(path.join(__dirname,"/uploads")))
