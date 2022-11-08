@@ -4,7 +4,7 @@ const path = require("path")
 const cors = require("cors")
 const port = process.env.PORT;
 const bodyParser = require("body-parser")
-const linkFront = 'https://ridesocial-p3ugdz5ku-daviroquedev.vercel.app/'
+const linkFront = 'https://ridesocial.vercel.app/'
 
 const app = express()
 
