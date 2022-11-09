@@ -2,9 +2,9 @@ require("dotenv").config()
 const express = require("express")
 const path = require("path")
 const cors = require("cors")
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const bodyParser = require("body-parser")
-const linkFront = 'https://ridesocial.vercel.app'
+const linkFront = 'http://ridesocial.vercel.app'
 
 const app = express()
 
