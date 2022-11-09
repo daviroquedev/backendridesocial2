@@ -2,7 +2,7 @@ require("dotenv").config()
 const express = require("express")
 const path = require("path")
 const cors = require("cors")
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5173;
 const bodyParser = require("body-parser")
 const linkFront = 'http://ridesocial.vercel.app'
 
@@ -27,6 +27,4 @@ const router = require("./routes/Router");
 
 app.use(router)
 
-app.listen(port, ()=>{
-    console.log(`app rodando na porta ${port}`)
-})
+app.listen(process.env.PORT || 5173)
