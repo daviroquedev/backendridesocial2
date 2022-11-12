@@ -1,5 +1,4 @@
 const Photo = require("../models/Photo")
-const User = require("../models/User")
 
 const mongoose = require("mongoose")
 
