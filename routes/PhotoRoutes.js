@@ -15,7 +15,7 @@ router.post("/", authGuard, imageUpload.single("image"), photoInsertValidation()
 router.delete("/:id", authGuard, deletePhoto);
 router.get("/", authGuard, getAllPhotos);
 router.get("/user/:id", getUserPhotos)
-router.get("/:id", authGuard, getPhotoById)
+router.get("/:id", getPhotoById)
 router.put("/:id",authGuard,imageUpload.single("image"),photoUpdateValidation(),validate,updatePhoto);
 router.put("/like/:id", authGuard, likePhoto)
 router.put("/comment/:id", authGuard, commentValidation(), validate, commentPhoto)
