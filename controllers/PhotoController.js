@@ -97,6 +97,7 @@ const getPhotoById = async (req, res) => {
 const updatePhoto = async (req, res) => {
     const { id } = req.params;
     const { title } = req.body;
+    console.log("é title"+{title})
   
     let image;
   
