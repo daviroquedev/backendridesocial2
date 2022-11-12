@@ -1,4 +1,6 @@
 const Photo = require("../models/Photo")
+const User = require("../models/User")
+
 const mongoose = require("mongoose");
 
 // Insert a photo, with an user related to it
