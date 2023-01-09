@@ -27,4 +27,4 @@ const router = require("./routes/Router");
 
 app.use(router)
 
-app.listen(process.env.PORT || 5173)
+app.listen( port )
